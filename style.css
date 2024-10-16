@@ -29,13 +29,35 @@ h1 {
   text-align: center;
 }
 
+p {
+  line-height: 20px;
+}
+
 input {
-  border: 3px solid rgb(253, 135, 0);
-  border-radius: 10px;
+  border-top: 3px solid rgb(253, 135, 0);
+  border-bottom: 3px solid rgb(253, 135, 0);
+  border-left: 3px solid rgb(253, 135, 0);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
   width: 100%;
-  height: 15%;
-  margin-bottom: 1rem;
+  height: 100%;
   outline: black;
+}
+.passInput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: orange;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  padding: 10px;
 }
 
 .requisiti {

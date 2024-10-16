@@ -11,11 +11,14 @@
       <div class="container">
         <div class="row">
           <h1>Password Checker</h1>
-          <input
-            id="password"
-            type="text"
-            placeholder="Insert strong password"
-          />
+          <div class="passInput">
+            <input
+              id="password"
+              type="password"
+              placeholder="Insert strong password"
+            />
+            <button id="togglePassword" onclick="showPassword()">Show</button>
+          </div>
           <div class="requisiti">
             <p id="minNumber">X At least 9 Chars</p>
             <p id="upper">X At least one Uppercase</p>

@@ -1,5 +1,6 @@
 //Verifica input password
-let campoPassword = document.getElementById("password");
+const campoPassword = document.getElementById("password");
+const togglePasswordButton = document.getElementById("togglePassword");
 const minNumber = document.getElementById("minNumber");
 const upper = document.getElementById("upper");
 const number = document.getElementById("number");
@@ -23,18 +24,49 @@ campoPassword.addEventListener("keydown", (e) => {
 });
 
 function passwordCheck(pass) {
-  if (pass.length >= 9) minNumber.classList.add("success");
-  else minNumber.classList.remove("success");
+  if (pass.length >= 9) {
+    minNumber.classList.add("success");
+    minNumber.innerHTML = "&check; At least 9 Chars";
+  } else {
+    minNumber.classList.remove("success");
+    minNumber.innerHTML = "X At least 9 Chars";
+  }
 
   const containsUpper = /[A-Z]/;
-  if (containsUpper.test(pass)) upper.classList.add("success");
-  else upper.classList.remove("success");
+  if (containsUpper.test(pass)) {
+    upper.classList.add("success");
+    upper.innerHTML = "&check; At least one Uppercase";
+  } else {
+    upper.classList.remove("success");
+    upper.innerHTML = "X At least one Uppercase";
+  }
 
   const containsNumber = /[0-9]/;
-  if (containsNumber.test(pass)) number.classList.add("success");
-  else number.classList.remove("success");
+  if (containsNumber.test(pass)) {
+    number.classList.add("success");
+    number.innerHTML = "&check; At least one Number";
+  } else {
+    number.classList.remove("success");
+    number.innerHTML = "X At least one Number";
+  }
 
   const containsSpecial = /[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]/;
-  if (containsSpecial.test(pass)) special.classList.add("success");
-  else special.classList.remove("success");
+  if (containsSpecial.test(pass)) {
+    special.classList.add("success");
+    special.innerHTML = "&check; At least one Special Char";
+  } else {
+    special.classList.remove("success");
+    special.innerHTML = "X At least one Special Char";
+  }
+}
+
+function showPassword() {
+  console.log(campoPassword.type);
+  if (campoPassword.type === "password") {
+    campoPassword.type = "text";
+    togglePasswordButton.textContent = "Hide"; // Change button text to "Hide"
+  } else {
+    campoPassword.type = "password";
+    togglePasswordButton.textContent = "Show"; // Change button text back to "Show"
+  }
 }
