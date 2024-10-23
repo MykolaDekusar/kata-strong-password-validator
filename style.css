@@ -12,14 +12,13 @@
 }
 
 .row {
-  height: 400px;
   width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: bisque;
+  background-color: rgba(218, 217, 214, 0.596);
   border-radius: 20px;
 }
 
@@ -39,9 +38,8 @@ input {
   border-left: 3px solid rgb(253, 135, 0);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-
   width: 100%;
-  height: 100%;
+  height: 30px;
   outline: black;
 }
 .passInput {
@@ -53,10 +51,13 @@ input {
 }
 
 button {
-  background-color: orange;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  height: 100%;
+  border-top: 3px solid rgb(253, 135, 0);
+  border-bottom: 3px solid rgb(253, 135, 0);
+  border-right: 3px solid rgb(253, 135, 0);
+  height: 30px;
+  line-height: 7px;
   padding: 10px;
   width: 70px;
 }
@@ -64,6 +65,7 @@ button {
 .requisiti {
   width: 100%;
   color: gray;
+  margin-bottom: 2rem;
 }
 
 .success {
@@ -71,11 +73,11 @@ button {
 }
 
 #passBar {
-  margin-top: 1rem;
   height: 30px;
   width: 100%;
   background-color: rgb(201, 201, 201);
   position: relative;
+  border-radius: 10px;
 }
 
 .oneOfFour {
@@ -85,6 +87,7 @@ button {
   right: 75%;
   bottom: 0;
   background-color: rgb(255, 31, 31);
+  border-radius: 10px 0px 0px 10px;
 }
 .twoOfFour {
   position: absolute;
@@ -93,6 +96,7 @@ button {
   right: 50%;
   bottom: 0;
   background-color: rgb(247, 143, 51);
+  border-radius: 10px 0px 0px 10px;
 }
 .threeOfFour {
   position: absolute;
@@ -101,6 +105,7 @@ button {
   right: 25%;
   bottom: 0;
   background-color: rgb(249, 225, 90);
+  border-radius: 10px 0px 0px 10px;
 }
 .fourOfFour {
   position: absolute;
@@ -109,4 +114,5 @@ button {
   right: 0;
   bottom: 0;
   background-color: green;
+  border-radius: 10px;
 }
